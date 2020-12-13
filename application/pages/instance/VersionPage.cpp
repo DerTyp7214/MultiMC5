@@ -207,6 +207,7 @@ void VersionPage::updateVersionControls()
     bool oldCraft = controlsEnabled && (minecraftVersion <= Version("1.12.2"));
     ui->actionInstall_Fabric->setEnabled(newCraft);
     ui->actionInstall_Forge->setEnabled(true);
+    ui->actionInstall_OptiFine->setEnabled(controlsEnabled && (minecraftVersion >= Version("1.7")));
     ui->actionInstall_LiteLoader->setEnabled(oldCraft);
     ui->actionReload->setEnabled(true);
     updateButtons();
@@ -507,6 +508,16 @@ void VersionPage::on_actionInstall_LiteLoader_triggered()
         m_container->refreshContainer();
     }
 }
+
+void VersionPage::on_actionInstall_Optifine_triggered()
+{
+    qDebug() << "on_actionInstall_Optifine_triggered.";
+    auto minecraftVersion = Version(m_profile->getComponentVersion("net.minecraft"));
+    qDebug() << minecraftVersion.toString();
+    qDebug() << m_inst->instanceRoot();
+    qDebug() << m_inst->jarModsDir();
+}
+
 
 void VersionPage::on_actionLibrariesFolder_triggered()
 {

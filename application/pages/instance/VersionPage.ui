@@ -90,6 +90,7 @@
    <addaction name="actionInstall_Forge"/>
    <addaction name="actionInstall_Fabric"/>
    <addaction name="actionInstall_LiteLoader"/>
+   <addaction name="actionInstall_OptiFine"/>
    <addaction name="actionInstall_mods"/>
    <addaction name="separator"/>
    <addaction name="actionAdd_to_Minecraft_jar"/>
@@ -180,6 +181,14 @@
    </property>
    <property name="toolTip">
     <string>Install the LiteLoader package.</string>
+   </property>
+  </action>
+  <action name="actionInstall_OptiFine">
+   <property name="text">
+    <string>Install OptiFine</string>
+   </property>
+   <property name="toolTip">
+    <string>Install OptiFine.</string>
    </property>
   </action>
   <action name="actionInstall_mods">
