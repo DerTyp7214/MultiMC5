@@ -509,13 +509,19 @@ void VersionPage::on_actionInstall_LiteLoader_triggered()
     }
 }
 
-void VersionPage::on_actionInstall_Optifine_triggered()
+void VersionPage::on_actionInstall_OptiFine_triggered()
 {
-    qDebug() << "on_actionInstall_Optifine_triggered.";
+    qDebug() << "on_actionInstall_OptiFine_triggered.";
     auto minecraftVersion = Version(m_profile->getComponentVersion("net.minecraft"));
-    qDebug() << minecraftVersion.toString();
-    qDebug() << m_inst->instanceRoot();
-    qDebug() << m_inst->jarModsDir();
+    QProcess *process = new QProcess();
+    process->setProcessChannelMode(QProcess::SeparateChannels);
+    process->setWorkingDirectory(m_inst->instanceRoot() + "/../../libraries/optifine");
+    connect(process, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),[=]  (int exitCode, QProcess::ExitStatus exitStatus)
+        {
+            m_profile->installJarMods({m_inst->jarModsDir() + "/OptiFile_" + minecraftVersion.toString() + ".jar"});
+        }
+    );
+    process->start("java -jar Optifine.jar version=" + minecraftVersion.toString() + " output=" + m_inst->jarModsDir());
 }
 
 
