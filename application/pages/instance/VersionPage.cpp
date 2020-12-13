@@ -515,15 +515,18 @@ void VersionPage::on_actionInstall_OptiFine_triggered()
     auto minecraftVersion = Version(m_profile->getComponentVersion("net.minecraft"));
     QProcess *process = new QProcess();
     process->setProcessChannelMode(QProcess::SeparateChannels);
-    process->setWorkingDirectory(m_inst->instanceRoot() + "/../../libraries/optifine");
+    process->setWorkingDirectory(m_inst->instanceRoot() + "/../../jars");
     connect(process, static_cast<void(QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),[=]  (int exitCode, QProcess::ExitStatus exitStatus)
         {
             m_profile->installJarMods({m_inst->jarModsDir() + "/OptiFile_" + minecraftVersion.toString() + ".jar"});
+            remove((m_inst->jarModsDir() + "/OptiFile_" + minecraftVersion.toString() + ".jar").toStdString().c_str());
+            ui->actionInstall_OptiFine->setEnabled(controlsEnabled && (minecraftVersion >= Version("1.7")));
+            qDebug() << process->error();
         }
     );
     process->start("java -jar Optifine.jar version=" + minecraftVersion.toString() + " output=" + m_inst->jarModsDir());
+    ui->actionInstall_OptiFine->setEnabled(false);
 }
-
 
 void VersionPage::on_actionLibrariesFolder_triggered()
 {
