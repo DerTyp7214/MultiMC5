@@ -1,0 +1,90 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Qt/Qt5.6.0/Tools/mingw492_32/bin/make.exe cmTC_2c449/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/Qt/Qt5.6.0/Tools/mingw492_32/bin/make.exe cmTC_2c449/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Qt/Qt5.6.0/Tools/mingw492_32/bin/make.exe cmTC_24c2c/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/Qt/Qt5.6.0/Tools/mingw492_32/bin/make.exe cmTC_24c2c/fast && 
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_b5ca3/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_b5ca3/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_1740d/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_1740d/fast && 
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_953df/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_953df/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_6e5af/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_6e5af/fast && 
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_e0d1d/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_e0d1d/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_c12f0/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_c12f0/fast && 
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_b5046/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_b5046/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_83c58/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_83c58/fast && 
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_f360e/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_f360e/fast && 
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: D:/DevStuff/MultiMC/MultiMC5/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/MinGW/bin/make.exe cmTC_00378/fast && The system cannot find the file specified
+Generator: execution of make failed. Make command was: C:/MinGW/bin/make.exe cmTC_00378/fast && 
+
+

@@ -522,9 +522,10 @@ void VersionPage::on_actionInstall_OptiFine_triggered()
             remove((m_inst->jarModsDir() + "/OptiFile_" + minecraftVersion.toString() + ".jar").toStdString().c_str());
             ui->actionInstall_OptiFine->setEnabled(controlsEnabled && (minecraftVersion >= Version("1.7")));
             qDebug() << process->error();
+            qDebug() << process->readAllStandardOutput();
         }
     );
-    process->start("java -jar Optifine.jar version=" + minecraftVersion.toString() + " output=" + m_inst->jarModsDir());
+    process->start("java -jar Optifine.jar version=" + minecraftVersion.toString() + " output=\"" + m_inst->jarModsDir() + "\"");
     ui->actionInstall_OptiFine->setEnabled(false);
 }
 
