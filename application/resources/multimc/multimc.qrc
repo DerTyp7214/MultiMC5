@@ -90,6 +90,13 @@
         <file>48x48/cat.png</file>
         <file>64x64/cat.png</file>
 
+        <file>16x16/custom.png</file>
+        <file>22x22/custom.png</file>
+        <file>24x24/custom.png</file>
+        <file>32x32/custom.png</file>
+        <file>48x48/custom.png</file>
+        <file>64x64/custom.png</file>
+
         <!-- Show mods folder. CC-BY-SA 3.0 http://openiconlibrary.sourceforge.net/gallery2/?./Icons/places/oxygen-style/folder-favorites.png -->
         <file>scalable/centralmods.svg</file>
         <file>16x16/centralmods.png</file>

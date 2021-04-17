@@ -67,6 +67,7 @@ protected:
 
 private slots:
     void onCatToggled(bool);
+    void onCustomToggled(bool);
 
     void on_actionAbout_triggered();
 
@@ -190,6 +191,7 @@ private:
     void addInstance(QString url = QString());
     void activateInstance(InstancePtr instance);
     void setCatBackground(bool enabled);
+    void setCustomBackground(bool enabled);
     void updateInstanceToolIcon(QString new_icon);
     void setSelectedInstanceById(const QString &id);
 

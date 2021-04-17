@@ -189,6 +189,7 @@ public:
     TranslatedAction actionDeleteInstance;
     TranslatedAction actionConfig_Folder;
     TranslatedAction actionCAT;
+    TranslatedAction actionCustom;
     TranslatedAction actionCopyInstance;
     TranslatedAction actionLaunchInstanceOffline;
     TranslatedAction actionScreenshots;
@@ -382,6 +383,16 @@ public:
         actionCAT->setPriority(QAction::LowPriority);
         all_actions.append(&actionCAT);
         mainToolBar->addAction(actionCAT);
+
+        actionCustom = TranslatedAction(MainWindow);
+        actionCustom->setObjectName(QStringLiteral("actionCustom"));
+        actionCustom->setCheckable(true);
+        actionCustom->setIcon(MMC->getThemedIcon("custom"));
+        actionCustom.setTextId(QT_TRANSLATE_NOOP("MainWindow", "LULW"));
+        actionCustom.setTooltipId(QT_TRANSLATE_NOOP("MainWindow", ":)"));
+        actionCustom->setPriority(QAction::LowPriority);
+        all_actions.append(&actionCustom);
+        mainToolBar->addAction(actionCustom);
 
         // profile menu and its actions
         actionManageAccounts = TranslatedAction(MainWindow);
@@ -698,6 +709,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new MainWindow
         // NOTE: calling the operator like that is an ugly hack to appease ancient gcc...
         connect(ui->actionCAT.operator->(), SIGNAL(toggled(bool)), SLOT(onCatToggled(bool)));
         setCatBackground(cat_enable);
+    }
+    // The Custom background
+    {
+        bool custom_enable = MMC->settings()->get("TheCustom").toBool();
+        ui->actionCustom->setChecked(custom_enable);
+        connect(ui->actionCustom.operator->(), SIGNAL(toggled(bool)), SLOT(onCustomToggled(bool)));
+        setCustomBackground(custom_enable);
     }
     // start instance when double-clicked
     connect(view, &GroupView::activated, this, &MainWindow::instanceActivated);
@@ -1291,6 +1309,12 @@ void MainWindow::onCatToggled(bool state)
     MMC->settings()->set("TheCat", state);
 }
 
+void MainWindow::onCustomToggled(bool state)
+{
+    setCustomBackground(state);
+    MMC->settings()->set("TheCustom", state);
+}
+
 namespace {
 template <typename T>
 T non_stupid_abs(T in)
@@ -1319,6 +1343,27 @@ GroupView
     background-repeat: none;
     background-color:palette(base);
 })").arg(cat));
+    }
+    else
+    {
+        view->setStyleSheet(QString());
+    }
+}
+
+void MainWindow::setCustomBackground(bool enabled)
+{
+    if (enabled)
+    {
+        view->setStyleSheet(QString(R"(
+GroupView
+{
+    background-image: url(:/backgrounds/%1);
+    background-attachment: fixed;
+    background-clip: padding;
+    background-position: top right;
+    background-repeat: none;
+    background-color:palette(base);
+})").arg("custom"));
     }
     else
     {

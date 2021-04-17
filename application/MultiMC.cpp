@@ -526,6 +526,9 @@ MultiMC::MultiMC(int &argc, char **argv) : QApplication(argc, argv)
         // The cat
         m_settings->registerSetting("TheCat", false);
 
+        // The custom
+        m_settings->registerSetting("TheCustom", false);
+
         m_settings->registerSetting("InstSortMode", "Name");
         m_settings->registerSetting("SelectedInstance", QString());
 
